@@ -488,8 +488,14 @@ public class ZahlenKonverterController implements Initializable {
 
          for (int i = 0; i < s.length(); i++) {
             String c = "" + s.charAt(i);
-            if (!(c.toUpperCase().matches(string_match)))
-               b = false;
+            if (!(c.toUpperCase().matches(string_match))) {
+            Alert alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Eingabeprüfung");
+            alert.setHeaderText("Zulässige Eingabe: " + string_match);
+            alert.setContentText("Ihre Eingabe -> " + c + " ist nicht richtig!");
+            alert.showAndWait();
+            b = false;
+            }
          }
       } catch (Exception e) {
          b = false;
