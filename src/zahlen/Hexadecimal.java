@@ -25,7 +25,7 @@ public class Hexadecimal {
 		return this.hexalNumber;
 	}
 	
-	public static String applyAsDecimal(String hexalNumber) {
+	public static String toDecimal(String hexalNumber) {
 
 		// Zunaechst mal die Nummber auf Richtigkeit pruefen:
 		hexalNumber = Funktionen.numberOK(hexalNumber, MATCH_STRING);
@@ -88,41 +88,41 @@ public class Hexadecimal {
 		return strResult;
 	}
 	
-	public String applyAsDecimal(){
+	public String toDecimal(){
 		
-		return applyAsDecimal(getHexalNumber());
+		return toDecimal(getHexalNumber());
 	}
 	
-	public static String applyAsBinary(String hexalNumber){
+	public static String toBinary(String hexalNumber){
 		
-		return Decimal.applyAsBinary(applyAsDecimal(hexalNumber));	
+		return Decimal.toBinary(toDecimal(hexalNumber));	
 	}
 	
-	public String applyAsBinary(){
+	public String toBinary(){
 		
-		return applyAsBinary(getHexalNumber());
+		return toBinary(getHexalNumber());
 		
 	}
 	
-	public static String applyAsOctal(String hexalNumber){
+	public static String toOctal(String hexalNumber){
 		
-		return Decimal.applyAsOctal(applyAsDecimal(hexalNumber));	
+		return Decimal.toOctal(toDecimal(hexalNumber));	
 	}
 	
-	public String applyAsOctal(){
+	public String toOctal(){
 		
-		return applyAsOctal(getHexalNumber());
+		return toOctal(getHexalNumber());
 		
 	}
 
-	public static String applyAsDuodecimal(String hexalNumber){
+	public static String toDuodecimal(String hexalNumber){
 		
-		return Decimal.applyAsDuodecimal(applyAsDecimal(hexalNumber));	
+		return Decimal.toDuodecimal(toDecimal(hexalNumber));	
 	}
 	
-	public String applyAsDuodecimal(){
+	public String toDuodecimal(){
 		
-		return applyAsDuodecimal(getHexalNumber());
+		return toDuodecimal(getHexalNumber());
 		
 	}
 }

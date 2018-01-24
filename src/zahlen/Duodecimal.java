@@ -25,7 +25,7 @@ public class Duodecimal {
 		return this.duoDecNumber;
 	}
 			
-	public static String applyAsDecimal(String duodecimalNumber) {
+	public static String toDecimal(String duodecimalNumber) {
 
 		// Zunaechst mal die Nummber auf Richtigkeit pruefen:
 		duodecimalNumber = Funktionen.numberOK(duodecimalNumber, MATCH_STRING);
@@ -74,41 +74,41 @@ public class Duodecimal {
 		String strResult = result.toString();		
 		return strResult;
 	}
-	public String applyAsDecimal(){
+	public String toDecimal(){
 		
-		return applyAsDecimal(getDuoDecimalNumber());
+		return toDecimal(getDuoDecimalNumber());
 	}
 	
-	public static String applyAsBinary(String duoDecNumber){
+	public static String toBinary(String duoDecNumber){
 		
-		return Decimal.applyAsBinary(Duodecimal.applyAsDecimal(duoDecNumber));	
+		return Decimal.toBinary(Duodecimal.toDecimal(duoDecNumber));	
 	}
 	
-	public String applyAsBinary(){
+	public String toBinary(){
 		
-		return applyAsBinary(getDuoDecimalNumber());
+		return toBinary(getDuoDecimalNumber());
 		
 	}
 	
-	public static String applyAsOctal(String duoDecNumber){
+	public static String toOctal(String duoDecNumber){
 		
-		return Decimal.applyAsOctal(Duodecimal.applyAsDecimal(duoDecNumber));	
+		return Decimal.toOctal(Duodecimal.toDecimal(duoDecNumber));	
 	}
 	
-	public String applyAsOctal(){
+	public String toOctal(){
 		
-		return applyAsOctal(getDuoDecimalNumber());
+		return toOctal(getDuoDecimalNumber());
 		
 	}
 
-	public static String applyAsHexadecimal(String duoDecNumber){
+	public static String toHexadecimal(String duoDecNumber){
 		
-		return Decimal.applyAsHexadecimal(Duodecimal.applyAsDecimal(duoDecNumber));	
+		return Decimal.toHexadecimal(Duodecimal.toDecimal(duoDecNumber));	
 	}
 	
-	public String applyAsHexadecimal(){
+	public String toHexadecimal(){
 		
-		return applyAsHexadecimal(getDuoDecimalNumber());
+		return toHexadecimal(getDuoDecimalNumber());
 		
 	}
 	

@@ -25,7 +25,7 @@ public class Octal {
 		return this.octNumber;
 	}
 	
-	public static String applyAsDecimal(String octNumber) {
+	public static String toDecimal(String octNumber) {
 
 		// Zunaechst mal die Nummber auf Richtigkeit pruefen:
 		octNumber = Funktionen.numberOK(octNumber, MATCH_STRING);
@@ -63,9 +63,9 @@ public class Octal {
 	
 	// Wenn in Verbindung mit einer Instanz:
 	
-		public String applyAsDecimal(){
+		public String toDecimal(){
 			
-			return applyAsDecimal(getOctNumber());
+			return toDecimal(getOctNumber());
 		}
 		
 		// Umrechnung zu Dual
@@ -73,16 +73,16 @@ public class Octal {
 			
 			// Statistisch:
 			
-			public static String applyAsBinary(String octNumber){
+			public static String toBinary(String octNumber){
 				
-				return Decimal.applyAsBinary(applyAsDecimal(octNumber));	
+				return Decimal.toBinary(toDecimal(octNumber));	
 			}
 			
 			// Als Instanz-Methode:
 			
-			public String applyAsBinary(){
+			public String toBinary(){
 				
-				return applyAsBinary(getOctNumber());
+				return toBinary(getOctNumber());
 			}
 			
 		
@@ -91,43 +91,43 @@ public class Octal {
 		
 		// Statistisch:
 		
-		public static String applyAsHexal(String octNumber){
+		public static String toHexal(String octNumber){
 			
-			return Decimal.applyAsHexadecimal(applyAsDecimal(octNumber));	
+			return Decimal.toHexadecimal(toDecimal(octNumber));	
 		}
 		
 		// Als Instanz-Methode:
 		
-		public String applyAsHexal(){
+		public String toHexal(){
 			
-			return applyAsHexal(getOctNumber());
+			return toHexal(getOctNumber());
 		}
 		
 		// Umrechnung zu Octal
 		// ===================
 		// Statistisch:
 		
-		public static String applyAsOctal(String octNumber){
+		public static String toOctal(String octNumber){
 			
-			return Decimal.applyAsOctal(applyAsDecimal(octNumber));	
+			return Decimal.toOctal(toDecimal(octNumber));	
 		}
 		
-		public String applyAsOctal(){
+		public String toOctal(){
 			
-			return applyAsOctal(getOctNumber());
+			return toOctal(getOctNumber());
 		}
 		
 		// Umrechnung zu duodezimal
 		// ========================
 		// Statistisch:
 		
-		public static String applyAsDuoDecimal(String octNumber){
+		public static String toDuoDecimal(String octNumber){
 				
-			return Decimal.applyAsDuodecimal(applyAsDecimal(octNumber));	
+			return Decimal.toDuodecimal(toDecimal(octNumber));	
 		}	
 		
-		public String applyAsDuoDecimal(){
+		public String toDuoDecimal(){
 			
-			return applyAsDuoDecimal(getOctNumber());
+			return toDuoDecimal(getOctNumber());
 		}
 }

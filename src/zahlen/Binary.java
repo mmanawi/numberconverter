@@ -26,7 +26,7 @@ public class Binary {
 		return this.binNumber;
 	}
 			
-	public static String applyAsDecimal(String binNumber) {
+	public static String toDecimal(String binNumber) {
 
 		// Zunaechst mal die Nummber auf Richtigkeit pruefen:
 		binNumber = Funktionen.numberOK(binNumber, MATCH_STRING);
@@ -66,40 +66,40 @@ public class Binary {
 		return strResult;
 	}
 	
-	public String applyAsDecimal(){
+	public String toDecimal(){
 		
-		return applyAsDecimal(getBinNumber());
+		return toDecimal(getBinNumber());
 	}
 	
-	public static String applyAsDuodecimal(String binNumber){
+	public static String toDuodecimal(String binNumber){
 		
-		return Decimal.applyAsDuodecimal(Binary.applyAsDecimal(binNumber));	
+		return Decimal.toDuodecimal(Binary.toDecimal(binNumber));	
 	}
 	
-	public String applyAsDuodecimal(){
+	public String toDuodecimal(){
 		
-		return applyAsDuodecimal(getBinNumber());
+		return toDuodecimal(getBinNumber());
 		
 	}
 	
-	public static String applyAsOctal(String binNumber){
+	public static String toOctal(String binNumber){
 		
-		return Decimal.applyAsOctal(Binary.applyAsDecimal(binNumber));	
+		return Decimal.toOctal(Binary.toDecimal(binNumber));	
 	}
 	
-	public String applyAsOctal(){
+	public String toOctal(){
 		
-		return applyAsOctal(getBinNumber());
+		return toOctal(getBinNumber());
 		
 	}
 
-	public static String applyAsHexadecimal(String binNumber){
+	public static String toHexadecimal(String binNumber){
 		
-		return Decimal.applyAsHexadecimal(Binary.applyAsDecimal(binNumber));	
+		return Decimal.toHexadecimal(Binary.toDecimal(binNumber));	
 	}
 	
-	public String applyAsHexadecimal(){
+	public String toHexadecimal(){
 		
-		return applyAsHexadecimal(getBinNumber());		
+		return toHexadecimal(getBinNumber());		
 	}
 }

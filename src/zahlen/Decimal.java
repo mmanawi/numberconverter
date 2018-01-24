@@ -25,7 +25,7 @@ public class Decimal {
 		return this.decNumber;
 	}
 
-	public static String applyAsBinary(String decNr) {
+	public static String toBinary(String decNr) {
 
 	
 		if (decNr == "0") {
@@ -51,12 +51,12 @@ public class Decimal {
 	
 	// Und wenn mit einer Instanz aufgerufen wird:
 
-	public String applyAsBinary() {
+	public String toBinary() {
 
-		return applyAsBinary(getDecNumber());
+		return toBinary(getDecNumber());
 	}
 
-	public static String applyAsOctal(String decNr) {
+	public static String toOctal(String decNr) {
 
 		if (decNr == "0") {
 			return "0";
@@ -80,12 +80,12 @@ public class Decimal {
 
 	// Und wenn mit einer Instanz aufgerufen wird:
 
-	public String applyAsOctal() {
+	public String toOctal() {
 
-		return applyAsOctal(getDecNumber());
+		return toOctal(getDecNumber());
 	}
 			
-	public static String applyAsHexadecimal(String decNr) {
+	public static String toHexadecimal(String decNr) {
 
 		if (decNr == "0") {
 			return "0";
@@ -133,11 +133,11 @@ public class Decimal {
 
 	// Und wenn mit einer Instanze aufgerufen wird:
 	
-	public String applyAsHexadecimal() {
-		return applyAsHexadecimal(getDecNumber());
+	public String toHexadecimal() {
+		return toHexadecimal(getDecNumber());
 	}
 	
-	public static String applyAsDuodecimal(String decNr) {
+	public static String toDuodecimal(String decNr) {
 
 		if (decNr == "0") {
 			return "0";
@@ -174,8 +174,8 @@ public class Decimal {
 	
 	// Und wenn mit einer Instanz aufgerufen wird:
 
-	public String applyAsDuodecimal() {
+	public String toDuodecimal() {
 
-		return applyAsDuodecimal(getDecNumber());
+		return toDuodecimal(getDecNumber());
 	}
 }
